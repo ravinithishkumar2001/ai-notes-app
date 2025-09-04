@@ -1,42 +1,182 @@
+/* Root Layout */
 #root {
-  max-width: 1280px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #e0e0f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px; /* Increased base font */
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Headings */
+h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.2rem; /* Bigger title */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h4 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem; /* Bigger section heading */
 }
 
-.card {
-  padding: 2em;
+.purple-icon {
+  color: #bb86fc;
+  font-size: 1.6rem;
 }
 
-.read-the-docs {
-  color: #888;
+.text-muted-small {
+  font-size: 1rem; /* was 0.85rem */
+  color: #aaa;
+}
+
+/* Add Note Section */
+.add-note-section .form-control {
+  background: rgba(46, 46, 66, 0.8);
+  border: 1px solid #4a4a60;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem; /* Bigger input text */
+  padding: 14px 130px 14px 14px;
+  transition: all 0.2s ease;
+}
+
+.add-note-section .form-control::placeholder {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.add-note-section .form-control:focus {
+  border-color: #bb86fc;
+  box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+
+.add-note-section .btn {
+  border-radius: 8px;
+  background: linear-gradient(135deg, #bb86fc, #7f39fb);
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem; /* Bigger button text */
+  padding: 10px 18px;
+  transition: transform 0.2s ease;
+}
+
+.add-note-section .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Notes Section */
+.notes-heading {
+  font-weight: bold;
+  font-size: 1.8rem; /* Bigger heading */
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Note Cards */
+.note-card {
+  background: rgba(46, 46, 66, 0.9);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* Note Content */
+.note-text {
+  color: #e0e0f0;
+  font-size: 1.1rem; /* Larger text */
+  line-height: 1.5;
+}
+
+/* Note Summary */
+.note-summary {
+  background: rgba(34, 34, 51, 0.85);
+  border-left: 3px solid #bb86fc;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-size: 1rem; /* Larger summary */
+}
+
+.note-summary-heading {
+  font-weight: bold;
+  color: #bb86fc;
+  font-size: 1rem; /* Larger label */
+  margin-bottom: 6px;
+  display: block;
+}
+
+.note-summary p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Note Footer */
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem; /* Bigger footer text */
+  margin-top: 12px;
+}
+
+.note-timestamp {
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.note-actions button {
+  font-size: 0.95rem; /* Bigger action buttons */
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  color: #bb86fc;
+  border-color: #bb86fc;
+}
+
+.btn-outline-primary:hover {
+  background-color: #bb86fc;
+  color: #1a1a2e;
+}
+
+.btn-outline-danger:hover {
+  background-color: #ff4d6d;
+  color: #fff;
+}
+
+/* Toast Styling */
+.toast {
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1rem; /* Bigger toast text */
 }
